@@ -1,21 +1,26 @@
 {
-  "name": "web-monitor",
-  "version": "0.0.0",
-  "description": "simple web monitor node app",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [
-    "node",
-    "monitoring",
-    "http"
-  ],
-  "author": "dmytrovelychko",
-  "license": "MIT",
-  "devDependencies": {
-    "husky": "0.14.3",
-    "prettier": "1.13.6",
-    "pretty-quick": "1.6.0"
-  }
+	"name": "web-monitor",
+	"version": "0.0.0",
+	"description": "simple web monitor node app",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [
+		"node",
+		"monitoring",
+		"http"
+	],
+	"author": "dmytrovelychko",
+	"license": "MIT",
+	"devDependencies": {
+		"husky": "1.0.1",
+		"prettier": "1.13.6",
+		"pretty-quick": "1.6.0"
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "pretty-quick --staged && echo 'asdf'"
+		}
+	}
 }

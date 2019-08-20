@@ -20,6 +20,9 @@
 		"pretty-quick": "pretty-quick --staged $(find . -path ./node_modules -prune -o -name '*.js' -print)",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
+	"dependencies": {
+		"winston": "^3.2.1"
+	},
 	"devDependencies": {
 		"eslint": "^6.2.0",
 		"husky": "^3.0.4",

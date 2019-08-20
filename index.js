@@ -2,14 +2,15 @@ const http = require('http');
 const https = require('https');
 const fs = require('fs');
 
-const { routingHandler } = './lib/router';
+const log = require('./lib/util/wlogger');
+const { routingHandler } = require('./lib/router');
 
 const config = require('./config');
 
 const httpServer = http.createServer(routingHandler);
 
 httpServer.listen(config.httpPort, () => {
-	console.log(`The HTTP server is running on port ${config.httpPort}`);
+	log.info(`The HTTP server is running on port ${config.httpPort}`);
 });
 
 const httpsServerOptions = {
@@ -20,5 +21,5 @@ const httpsServerOptions = {
 const httpsServer = https.createServer(httpsServerOptions, routingHandler);
 
 httpsServer.listen(config.httpsPort, () => {
-	console.log(`The HTTPS server is running on port ${config.httpsPort}`);
+	log.info(`The HTTPS server is running on port ${config.httpsPort}`);
 });

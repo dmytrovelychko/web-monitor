@@ -5,7 +5,7 @@ const fs = require('fs');
 const log = require('./lib/util/wlogger');
 const { routingHandler } = require('./lib/router');
 
-const config = require('./config');
+const config = require('config');
 
 const httpServer = http.createServer(routingHandler);
 

@@ -16,8 +16,8 @@
 	},
 	"scripts": {
 		"start": "node index.js",
-		"lint": "eslint $(./print-js-to-check) --fix",
-		"pretty-quick": "pretty-quick --staged $(./print-js-to-check)",
+		"lint": "eslint $(find . -path ./node_modules -prune -o -name '*.js' -print) --fix",
+		"pretty-quick": "pretty-quick --staged $(find . -path ./node_modules -prune -o -name '*.js' -print)",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"devDependencies": {

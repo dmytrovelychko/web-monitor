@@ -15,7 +15,7 @@
 		"url": "git@github.com:dmitriyvelichkodev/web-monitor.git"
 	},
 	"scripts": {
-		"start": "node index.js",
+		"start": "if [ \"$NODE_ENV\" != \"production\" ]; then node index.js; else echo \"nodeamon\"; fi",
 		"lint": "eslint $(find . -path ./node_modules -prune -o -name '*.js' -print) --fix",
 		"pretty-quick": "pretty-quick --staged $(find . -path ./node_modules -prune -o -name '*.js' -print)",
 		"test": "echo \"Error: no test specified\" && exit 1"

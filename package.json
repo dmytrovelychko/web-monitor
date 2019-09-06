@@ -15,7 +15,7 @@
 		"url": "git@github.com:dmitriyvelichkodev/web-monitor.git"
 	},
 	"scripts": {
-		"start": "if [ \"$NODE_ENV\" != \"production\" ]; then node index.js; else echo \"nodeamon\"; fi",
+		"start": "if [ \"$NODE_ENV\" = \"production\" ]; then node index.js; else nodemon index.js; fi",
 		"lint": "eslint $(find . -path ./node_modules -prune -o -name '*.js' -print) --fix",
 		"pretty-quick": "pretty-quick --staged $(find . -path ./node_modules -prune -o -name '*.js' -print)",
 		"test": "echo \"Error: no test specified\" && exit 1"
@@ -27,6 +27,7 @@
 	"devDependencies": {
 		"eslint": "^6.2.0",
 		"husky": "^3.0.4",
+		"nodemon": "^1.19.2",
 		"prettier": "^1.18.2",
 		"pretty-quick": "^1.11.1"
 	},

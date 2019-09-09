@@ -1,11 +1,10 @@
 const http = require('http');
 const https = require('https');
 const fs = require('fs');
+const config = require('config');
 
 const log = require('./lib/util/logger');
 const { router } = require('./lib/router');
-
-const config = require('config');
 
 const httpServer = http.createServer(router);
 

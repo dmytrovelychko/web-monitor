@@ -4,9 +4,9 @@ const fs = require('fs');
 const config = require('config');
 
 const log = require('./lib/util/logger');
-const { router } = require('./lib/router');
+const router = require('./lib/router');
 
-const httpServer = http.createServer(router);
+const httpServer = http.createServer(router.generalHandler);
 
 httpServer.listen(config.httpPort, () => {
 	log.info(`The HTTP server is running on port ${config.httpPort}`);
@@ -17,7 +17,7 @@ const httpsServerOptions = {
 	cert: fs.readFileSync('./https/server-options/server.crt'),
 };
 
-const httpsServer = https.createServer(httpsServerOptions, router);
+const httpsServer = https.createServer(httpsServerOptions, router.generalHandler);
 
 httpsServer.listen(config.httpsPort, () => {
 	log.info(`The HTTPS server is running on port ${config.httpsPort}`);

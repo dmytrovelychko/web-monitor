@@ -16,7 +16,7 @@
 	},
 	"scripts": {
 		"start": "if [ \"$NODE_ENV\" = \"production\" ]; then node index.js; else nodemon index.js; fi",
-		"start:debug": "if [ \"$NODE_ENV\" = \"production\" ]; then node --inspect index.js; else nodemon --inspect index.js; fi",
+		"start:debug": "nodemon --inspect index.js",
 		"lint": "eslint $(find . -path ./node_modules -prune -o -name '*.js' -print) --fix",
 		"pretty-quick": "pretty-quick --staged $(find . -path ./node_modules -prune -o -name '*.js' -print)",
 		"test": "echo \"Error: no test specified\" && exit 1"

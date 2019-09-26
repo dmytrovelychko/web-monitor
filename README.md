@@ -2,7 +2,7 @@
 
 ## Description
 
-Web monitor node app
+Web monitor node app. Service to ping healthchecks for specified websites.
 
 ## For development
 
@@ -10,7 +10,7 @@ Web monitor node app
 
 1. Create root CA private key to generate root CA certificate
    (chrome will claim about common name property in certificate if you will try to use only it for auth)
-     
+
     `openssl req -newkey rsa:2048 -new -nodes -x509 -days 3650 -keyout rootCA.key -out rootCA.pem`
 
 2. Set root certificate as trusted in browser (or keychain in mac)

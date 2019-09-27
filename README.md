@@ -4,6 +4,13 @@
 
 Web monitor node app. Service to ping healthchecks for specified websites.
 
+## PLans
+
+- setup CI/CD
+- use docker container for isolation
+- change files to proper db
+- use react/redux for UI
+
 ## For development
 
 ##### How to setup https for localhost?

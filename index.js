@@ -22,3 +22,6 @@ const httpsServer = https.createServer(httpsServerOptions, router);
 httpsServer.listen(config.httpsPort, () => {
 	log.info(`The HTTPS server is running on port ${config.httpsPort}`);
 });
+
+// Setup worker after server
+// cronJob.init()

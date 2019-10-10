@@ -1,15 +1,22 @@
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 
+## Current todo list:
+
+-   setup proper db
+-   create background jobs to do checks
+-   setup logging
+-   setup framework for router
+
 ## Description
 
 Web monitor node app. Service to ping healthchecks for specified websites.
 
 ## PLans
 
-- setup CI/CD
-- use docker container for isolation
-- change files to proper db
-- use react/redux for UI
+-   setup CI/CD
+-   use docker container for isolation
+-   change files to proper db
+-   use react/redux for UI
 
 ## For development
 

@@ -6,6 +6,7 @@
 -   create background jobs to do checks
 -   setup logging
 -   setup framework for router
+-   add log rotation
 
 ## Description
 

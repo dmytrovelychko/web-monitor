@@ -79,4 +79,6 @@ typings/
 
 https/server-options
 
-config/local.js
+# host specific configs
+config/local*.js
+wm_db.env

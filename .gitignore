@@ -80,5 +80,5 @@ typings/
 https/server-options
 
 # host specific configs
-config/local*.js
+config/local.js
 wm_db.env

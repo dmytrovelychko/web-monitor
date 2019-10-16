@@ -3,6 +3,7 @@
 ## Current todo list:
 
 -   setup proper db
+
 -   create background jobs to do checks
 -   setup logging
 -   setup framework for router
@@ -16,10 +17,33 @@ Web monitor node app. Service to ping healthchecks for specified websites.
 
 -   setup CI/CD
 -   use docker container for isolation
--   change files to proper db
 -   use react/redux for UI
 
 ## For development
+
+Local dependencies are setup through docker containers.
+To start service run:
+
+`docker-compose up && npm start`
+
+##### Setup credentials for db
+
+1. Create wm_db.env in the project root dir with:
+
+```
+MYSQL_ROOT_PASSWORD=pass
+MYSQL_PASSWORD=pass
+```
+
+2. Add:
+
+```
+db: {
+    host: 'host,
+    user: 'the same as in docker-compose.yml',
+    password: 'the same as in wm_db.env'
+}
+```
 
 ##### How to setup https for localhost?
 

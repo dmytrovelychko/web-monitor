@@ -2,7 +2,7 @@ version: '3.1'
 
 services:
     db:
-        image: 'mysql:8'
+        image: 'mysql:5.7.27'
         restart: always
         env_file:
             - ./wm_db.env

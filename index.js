@@ -6,7 +6,6 @@ const config = require('config');
 const log = require('./lib/util/logger');
 const router = require('./lib/router');
 
-// init db before server able to receive connections
 require('./lib/db')
 	.init()
 	.then(() => {

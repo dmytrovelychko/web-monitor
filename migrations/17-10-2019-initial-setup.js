@@ -11,11 +11,11 @@ exports.up = function(knex) {
 			table.string('password', 255).notNullable();
 			table.string('salt', 255).notNullable();
 			table
-				.timestamp('createdAt')
+				.dateTime('createdAt')
 				.notNullable()
 				.defaultTo(knex.fn.now());
 			table
-				.timestamp('updatedAt')
+				.dateTime('updatedAt')
 				.notNullable()
 				.defaultTo(
 					knex.raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'),
@@ -27,11 +27,11 @@ exports.up = function(knex) {
 			table.foreign('userId').references('users.id');
 			table.dateTime('expire').notNullable();
 			table
-				.timestamp('createdAt')
+				.dateTime('createdAt')
 				.notNullable()
 				.defaultTo(knex.fn.now());
 			table
-				.timestamp('updatedAt')
+				.dateTime('updatedAt')
 				.notNullable()
 				.defaultTo(
 					knex.raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'),
@@ -47,11 +47,11 @@ exports.up = function(knex) {
 			table.string('successCodes', 255);
 			table.integer('timeoutSec');
 			table
-				.timestamp('createdAt')
+				.dateTime('createdAt')
 				.notNullable()
 				.defaultTo(knex.fn.now());
 			table
-				.timestamp('updatedAt')
+				.dateTime('updatedAt')
 				.notNullable()
 				.defaultTo(
 					knex.raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'),

@@ -45,7 +45,7 @@ exports.up = function(knex) {
 			table.string('url', 255);
 			table.string('method', 255);
 			table.string('successCodes', 255);
-			table.integer('timeoutSec');
+			table.integer('timeoutSeconds');
 			table
 				.dateTime('createdAt')
 				.notNullable()

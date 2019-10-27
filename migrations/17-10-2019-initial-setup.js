@@ -24,7 +24,11 @@ exports.up = function(knex) {
 		.createTable('tokens', table => {
 			table.specificType('id', 'char(36)').primary();
 			table.specificType('userId', 'char(36)').notNullable();
-			table.foreign('userId').references('users.id');
+			table
+				.foreign('userId')
+				.references('users.id')
+				.onUpdate('CASCADE')
+				.onDelete('CASCADE');
 			table.dateTime('expire').notNullable();
 			table
 				.dateTime('createdAt')
@@ -40,7 +44,11 @@ exports.up = function(knex) {
 		.createTable('checks', table => {
 			table.specificType('id', 'char(36)').primary();
 			table.specificType('userId', 'char(36)').notNullable();
-			table.foreign('userId').references('users.id');
+			table
+				.foreign('userId')
+				.references('users.id')
+				.onUpdate('CASCADE')
+				.onDelete('CASCADE');
 			table.string('protocol', 10);
 			table.string('url', 255);
 			table.string('method', 255);

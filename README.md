@@ -2,8 +2,6 @@
 
 ## Current todo list:
 
--   setup proper db
-
 -   create background jobs to do checks
 -   setup logging
 -   setup framework for router

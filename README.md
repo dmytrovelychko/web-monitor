@@ -11,7 +11,7 @@
 
 Web monitor node app. Service to ping healthchecks for specified websites.
 
-## PLans
+## Plans
 
 -   setup CI/CD
 -   use docker container for isolation

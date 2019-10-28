@@ -5,9 +5,13 @@ const config = require('config');
 
 const log = require('./lib/util/logger');
 const router = require('./lib/router');
+const cronJobs = require('./lib/cronJobs');
 
 require('./lib/db')
 	.init()
+	.then(() => {
+		return cronJobs.init();
+	})
 	.then(() => {
 		const httpServer = http.createServer(router);
 
@@ -26,6 +30,3 @@ require('./lib/db')
 			log.info(`The HTTPS server is running on port ${config.httpsPort}`);
 		});
 	});
-
-// Setup worker after server
-// cronJob.init()

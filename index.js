@@ -9,9 +9,7 @@ const cronJobs = require('./lib/cronJobs');
 
 require('./lib/db')
 	.init()
-	.then(() => {
-		return cronJobs.init();
-	})
+	.then(cronJobs.init)
 	.then(() => {
 		const httpServer = http.createServer(router);
 

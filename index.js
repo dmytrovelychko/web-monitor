@@ -5,11 +5,9 @@ const config = require('config');
 
 const log = require('./lib/util/logger');
 const router = require('./lib/router');
-const cronJobs = require('./lib/cronJobs');
 
 require('./lib/db')
 	.init()
-	.then(cronJobs.init)
 	.then(() => {
 		const httpServer = http.createServer(router);
 
